@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Supriya Sign up form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function validate() {
+            var fname = document.getElementById('fname').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var conpassword = document.getElementById('conpassword').value;
+
+            const pattern = /^ ( ? = .[A - Z])( ? = .[a - z])( ? = .[!@# $ & ])( ? = .[0 - 9])( ? = . {8,})/;
+            var result = 0;
+
+            if (!(fname.length > 3 && fname.length < 25)) {
+                document.getElementById('fnameerr').innerHTML = 'Please Enter the numbers between 3 and 25.';
+            } else {
+                document.getElementById('fnameerr').innerHTML = '';
+                result++;
+            }
+
+
+            if (email === "") {
+                document.getElementById('emailError').innerHTML = 'Please Enter the valid email address with @.'
+            } else {
+                document.getElementById('emailError').innerHTML = ''
+                result++
+            }
+
+            if (!pattern.test(password)) {
+                if (!/(?=.*[A-Z])/.test(password)) {
+                    document.getElementById('passwordError').innerHTML = 'UpperCase missing';
+                } else {
+                    document.getElementById('passwordError').innerHTML = '';
+                    result++;
+                }
+                if (!/(?=.*[\W_])/.test(password)) {
+                    document.getElementById('passwordError').innerHTML = 'password must contain at least one special character';
+                }
+                if (!/(?=.*[0-9])/.test(password)) {
+                    document.getElementById('passwordError').innerHTML = 'password must contain at least one digit';
+                }
+                if (!/(?=.{8,})/.test(password)) {
+                    document.getElementById('passwordError').innerHTML = 'password must have atleast 8 characters';
+                }
+                if (!/(?=.*[a-z])/.test(password)) {
+                    document.getElementById('passwordError').innerHTML = 'Lower Case missing';
+                }
+
+
+
+
+            } else {
+                document.getElementById('passwordError').innerHTML = '';
+                result++;
+            }
+
+
+            if (!(conpassword == password)) {
+                document.getElementById('conpasswordError').innerHTML = 'Please re-enter the password again.'
+            } else {
+                document.getElementById('conpasswordError').innerHTML = '';
+                result++;
+            }
+
+            if (result == 4) {
+                alert("The form has been submitted");
+                window.location.reload();
+            } else {
+                console.log(result)
+
+
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<style>
+    body {
+        background-image: url('glass.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    h1 {
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+    
+    .signup {
+        margin: auto;
+        width: 30%;
+        text-align: center;
+        color: white;
+        border: 2px solid white;
+        padding: 15px;
+    }
+    
+    #email {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    #fname {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    #password {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    #conpassword {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    .btn {
+        width: 150px;
+        padding: 5px;
+        font-family: serif;
+        font-size: 14px;
+        border: none;
+        border: 1px solid white;
+        outline: 0;
+        border-radius: 5px;
+        background: none;
+        color: white;
+    }
+    
+    #sub:hover {
+        background-color: #123456;
+    }
+    
+     ::placeholder {
+        color: white;
+    }
+</style>
+</style>
+
+<body>
+
+    <body>
+        <h1>Sign Up</h1>
+        <div class="signup">
+            <form id="signup">
+                <div class="form-group">
+                    <label for="Name"><b>Username</b></label><br>
+                    <input type="text" name="fname" id="fname" placeholder="Enter your user name"><br><br>
+                    <span id="fnameerr" class="text-warning"></span></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="Name"><b>Email</b></label><br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email"><br><br>
+                    <span id="emailError" class="text-warning"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="Name"><b>Password</b></label><br>
+                    <input type="text" name="password" id="password" placeholder="Enter your password"><br><br>
+                    <span id="passwordError" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="Name"><b>Confirm Password</b></label><br>
+                    <input type="text" name="conpassword" id="conpassword" placeholder="Enter your password"><br><br>
+                    <span id="conpasswordError" class="text-warning"></span>
+                </div>
+
+                <!---<div class="form-group">
+                    <label for="Name"><b>Country</b></label><br>
+                    <select id="country">
+                        <option1 value=India>India</option1>
+                        <option1 value=China>China</option1>
+                        <option1 value=Japan>Japan</option1>
+                        <option1 value=Indonesia>Indonesia</option1>
+                    </select>
+                    <input type="text" name="country" id="country" placeholder="Enter your country"><br>
+                    <span id="countryErr" class="text-warning"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="Name"><b>Gender</b></label><br>
+                    <input type="radio" name="ma" id="ma"><span id="ma">&nbsp;Male</span>
+                    <input type="radio" name="ma" id="ma"><span id="ma">&nbsp;Female</span><br>
+                    <span id="genderErr" class="text-warning"></span>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Name"><b>Hobbies </b></label><br>
+                    <input type="checkbox" id="check"><span id="check">Sports</span><br>
+
+                    <input type="checkbox" id="check"><span id="check">Movies</span><br>
+
+                    <input type="checkbox" id="check"><span id="check">music</span><br>
+
+
+                    <span id="HobbiesErr" class="text-warning"></span>
+                </div>
+                <div>--->
+
+
+                <div>
+                    <input type="button" value="submit" class="btn" onclick="validate()">
+
+                </div>
+            </form>
+    </body>
+</body>
+
+</html>

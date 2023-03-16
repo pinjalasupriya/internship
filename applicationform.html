@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Application form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function validate() {
+            var fname = document.getElementById('fname').value;
+            var email = document.getElementById('email').value;
+            var mobilenumber = document.getElementById('mobilenumber').value;
+            var country = document.getElementById('countryName').value;
+            var male = document.getElementById('male').checked;
+            var female = document.getElementById('female').checked;
+            var check1 = document.getElementById('check1').checked;
+            var check2 = document.getElementById('check2').checked;
+            var check3 = document.getElementById('check3').checked;
+
+            console.log(country)
+            var result = 0;
+            if (fname === "") {
+                document.getElementById('fnameerr').innerHTML = 'Please Enter your name';
+            } else {
+                document.getElementById('fnameerr').innerHTML = '';
+                result++;
+            }
+
+            if (mobilenumber === "") {
+                document.getElementById('mobilenumberErr').innerHTML = 'Please enter your mobile number.'
+            } else {
+                document.getElementById('mobilenumberErr').innerHTML = '';
+                result++;
+            }
+
+            if (email === "") {
+                document.getElementById('emailError').innerHTML = 'Please Enter your email address';
+            } else {
+                document.getElementById('emailError').innerHTML = '';
+                result++;
+            }
+
+            if (country == "needToSelect") {
+                document.getElementById('countryErr').innerHTML = 'Please select your country';
+            } else {
+                document.getElementById('countryErr').innerHTML = '';
+                result++;
+            }
+
+            if (male === false && female === false) {
+                document.getElementById('genderErr').innerHTML = 'Please select your gender.'
+            } else {
+                document.getElementById('genderErr').innerHTML = '';
+                result++;
+            }
+
+            if (check1 === false && check2 === false && check3 === false) {
+                document.getElementById('HobbiesErr').innerHTML = 'Please select your hobbies.'
+            } else {
+                document.getElementById('HobbiesErr').innerHTML = '';
+                result++;
+            }
+
+
+            if (result == 6) {
+                alert("The form has been submitted");
+                window.location.reload();
+            } else {
+                console.log(result)
+
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<style>
+    body {
+        background-image: url('glass.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    h1 {
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+    
+    .application {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        color: white;
+        border: 2px solid white;
+        padding: 15px;
+    }
+    
+    #email {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    #fname {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    #mobilenumber {
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    #country {
+        width: 50%;
+        border-radius: 5px;
+        border: 1px solid white;
+        outline: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: none;
+        color: white;
+    }
+    
+    .btn {
+        width: 150px;
+        padding: 5px;
+        font-family: serif;
+        font-size: 14px;
+        border: none;
+        border: 1px solid white;
+        outline: 0;
+        border-radius: 5px;
+        background: none;
+        color: white;
+    }
+    
+    #sub:hover {
+        background-color: #123456;
+    }
+    
+     ::placeholder {
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>Application Form</h1>
+    <div class="application">
+        <form id="application">
+            <div class="form-group">
+                <label for="Name"><b>Full Name</b></label><br>
+                <input type="text" name="fname" id="fname" placeholder="Enter your full name"><br>
+                <span id="fnameerr" class="text-warning"></span>
+
+            </div>
+            <div class="form-group">
+                <label for="Name"><b>Email Address</b></label><br>
+                <input type="email" name="email" id="email" placeholder="Enter your email"><br>
+                <span id="emailError" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Name"><b>Mobile Number</b></label><br>
+                <input type="text" name="mobilenumber" id="mobilenumber" placeholder="Enter your mobile number"><br>
+                <span id="mobilenumberErr" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="country"><b>Country</b></label><br>
+                <select name="country" id="countryName">
+                        <option value="needToSelect"><strong>Select Your Country</strong></option>
+                        <option value="india">India</option>
+                        <option value="China">China</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                </select><br />
+                <span id="countryErr" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Name"><b>Gender</b></label><br>
+                <input type="radio" name="male" id="male"><span id="ma">&nbsp;Male</span>
+                <input type="radio" name="female" id="female"><span id="ma">&nbsp;Female</span><br>
+                <span id="genderErr" class="text-warning"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label for="Name"><b>Hobbies </b></label><br>
+                <input type="checkbox" id="check1"><span id="check">Sports</span><br>
+
+                <input type="checkbox" id="check2"><span id="check">Movies</span><br>
+
+                <input type="checkbox" id="check3"><span id="check">music</span><br>
+
+
+                <span id="HobbiesErr" class="text-warning"></span>
+            </div>
+            <div>
+
+
+                <div>
+                    <input type="button" value="submit" class="btn" onclick="validate()">
+
+                </div>
+        </form>
+</body>
+
+</html>
