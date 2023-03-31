@@ -1,0 +1,116 @@
+.container {
+    /* margin: left; */
+    width: 50%;
+    text-align: center;
+    color: #800080;
+    /* border-style: solid; */
+    border-color: 1px blue;
+    padding: 15px;
+    box-shadow: 0 1px 4px 0 rgba(216, 216, 230, 0.3);
+    background-color: #FFFAFA;
+    font-size: medium !important;
+}
+
+.bg-img {
+    background-image: url('src\assets\Company-amico.png');
+    height: 80vh;
+    /* width: 30%; */
+    background-size: cover;
+}
+
+h3 {
+    font-family: Poppins;
+    color: white!important;
+    background-color: #800080;
+    padding: 25px;
+    text-align: center;
+}
+
+.form-control {
+    margin: auto;
+    height: 40px;
+    width: 400px;
+    background: #FFFAFA;
+    border-radius: 6px;
+    box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+}
+
+.submit {
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    outline: 0;
+    padding: 8px 35px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.submit:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+}
+
+.submit:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+}
+
+
+/* #address {
+    margin: auto;
+    height: 90px;
+    width: 400px;
+    background: #FFFAFA;
+    border-radius: 6px;
+    box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+} */
+
+.addbutton {
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    outline: 0;
+    padding: 8px 8px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.items {
+    margin: left;
+    height: 40px;
+    width: 400px;
+    background: #FFFAFA;
+    border-radius: 6px;
+    box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+}
